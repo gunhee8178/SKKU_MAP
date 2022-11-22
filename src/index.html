@@ -84,17 +84,21 @@
             firebase.initializeApp(firebaseConfig);
 
             var database = firebase.database();
-            const dbRef = firebase.database().ref();
-            dbRef.child("space_list").get().then((snapshot) => {
+            var temp ;
+            const dbRef = firebase.database().ref('/');
+            dbRef.orderByChild("location").equalTo("삼성학술정보관").get().then((snapshot) => {
               if (snapshot.exists()) {
-                console.log(snapshot.val());
+                temp = snapshot.val()
+                console.log(temp);
               } else {
                 console.log("No data available");
               }
             }).catch((error) => {
               console.error(error);
             });
-
+            console.log(temp);
+            // ref url
+            //  https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/database/Query
         </script>
 
     </body>

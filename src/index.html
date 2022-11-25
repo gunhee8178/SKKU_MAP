@@ -3,7 +3,8 @@
     <head>
         <title>제목</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/space.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     </head>
     <body>
@@ -24,7 +25,62 @@
                     Tab content 1
                 </div>
                 <div id="tab2" class="cont">
-                    Tab content 2
+                    <div class="topnav">
+                        <input type="text" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <ul class="myUL">
+                        <li><a class="building" href="#">1 공학관</a>
+                            <ul class="myUL">
+                                <li><a href="#">1층</a></li>
+                                <li><a href="#">2층</a></li>
+                                <li><a href="#">3층</a></li>
+                                <li><a href="#">4층</a></li>
+                                <li><a href="#">5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="building" href="#">2 공학관</a>
+                            <ul class="myUL">
+                                <li><a href="#">1층</a></li>
+                                <li><a href="#">2층</a></li>
+                                <li><a href="#">3층</a></li>
+                                <li><a href="#">4층</a></li>
+                                <li><a href="#">5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="building" href="#">반도체관</a>
+                            <ul class="myUL">
+                                <li><a href="#">1층</a></li>
+                                <li><a href="#">2층</a></li>
+                                <li><a href="#">3층</a></li>
+                                <li><a href="#">4층</a></li>
+                                <li><a href="#">5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="building" href="#">삼성 학술 정보관</a>
+                            <ul class="myUL">
+                                <li><a href="#">1층</a></li>
+                                <li><a href="#">2층</a></li>
+                                <li><a href="#">3층</a></li>
+                                <li><a href="#">4층</a></li>
+                                <li><a href="#">5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="building" href="#">산학 협력관</a>
+                            <ul class="myUL">
+                                <li><a href="#">1층</a></li>
+                                <li><a href="#">2층</a></li>
+                                <li><a href="#">3층</a></li>
+                                <li><a href="#">4층</a></li>
+                                <li><a href="#">5층</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
                 </div>
                 <div id="tab3" class="cont">
                     Tab content 3
@@ -74,29 +130,39 @@
             }
         </script>
 
-        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+        <script type="text/javascript" src="./script/building.js">
+            
+        </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script> -->
         <script type="text/javascript" src="key.json"></script>
         <script>
             firebase.initializeApp(firebaseConfig);
 
             var database = firebase.database();
-            var temp ;
+            var data;
             const dbRef = firebase.database().ref('/');
             dbRef.orderByChild("location").equalTo("삼성학술정보관").get().then((snapshot) => {
-              if (snapshot.exists()) {
-                temp = snapshot.val()
-                console.log(temp);
+              if ( snapshot.exists() ) {
+                data = snapshot.val()
+
               } else {
                 console.log("No data available");
               }
             }).catch((error) => {
               console.error(error);
             });
-            console.log(temp);
+
+            // for (const [key, value] of Object.entries(temp)) {
+            //     if(value.floor == 2){
+            //         console.log(value);
+            //     }   
+            // }
             // ref url
             //  https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/database/Query
         </script>

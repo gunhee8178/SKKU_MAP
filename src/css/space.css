@@ -1,5 +1,7 @@
 .cont{
+    height: 100%;
     text-align: center;
+    overflow-y: scroll;
 }
 
 /* Add a black background color to the top navigation bar */
@@ -77,20 +79,38 @@
   }
 
   /* https://www.w3schools.com */
-  .myUL .myUL{
+  li .myUL{
     display: none;
   }
 
-  li.active .myUL{
+  li.activeBuilding .myUL{
     display: block;
    
 }
 
-li.active a{
+li.activeBuilding a{
     background-color: #999999;
 }
 
-.active .myUL li a{
+.activeBuilding .myUL li a{
     background-color: #bbbbbb;
 }
+
+li .card{
+  display: none;
+}
+
+li.activeFloor .card{
+  display: block;
+ 
+}
+
+.card{
+  border: black 2px solid;
+  margin: 5%;
+  /* margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%; */
+}
+
 

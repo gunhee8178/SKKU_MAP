@@ -30,53 +30,53 @@
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
                     <ul class="myUL">
-                        <li><a class="building" href="#">1 공학관</a>
+                        <li ><a class="building" name="1공학관" href="#">제1 공학관</a>
                             <ul class="myUL">
-                                <li><a href="#">1층</a></li>
-                                <li><a href="#">2층</a></li>
-                                <li><a href="#">3층</a></li>
-                                <li><a href="#">4층</a></li>
-                                <li><a href="#">5층</a></li>
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
                             </ul>
                         </li>
 
-                        <li><a class="building" href="#">2 공학관</a>
+                        <li ><a class="building" name="2공학관" href="#">제2 공학관</a>
                             <ul class="myUL">
-                                <li><a href="#">1층</a></li>
-                                <li><a href="#">2층</a></li>
-                                <li><a href="#">3층</a></li>
-                                <li><a href="#">4층</a></li>
-                                <li><a href="#">5층</a></li>
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
                             </ul>
                         </li>
 
-                        <li><a class="building" href="#">반도체관</a>
+                        <li ><a class="building" name="반도체관" href="#">반도체관</a>
                             <ul class="myUL">
-                                <li><a href="#">1층</a></li>
-                                <li><a href="#">2층</a></li>
-                                <li><a href="#">3층</a></li>
-                                <li><a href="#">4층</a></li>
-                                <li><a href="#">5층</a></li>
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
                             </ul>
                         </li>
 
-                        <li><a class="building" href="#">삼성 학술 정보관</a>
-                            <ul class="myUL">
-                                <li><a href="#">1층</a></li>
-                                <li><a href="#">2층</a></li>
-                                <li><a href="#">3층</a></li>
-                                <li><a href="#">4층</a></li>
-                                <li><a href="#">5층</a></li>
+                        <li ><a class="building" name="삼성학술정보관" href="#">삼성 학술 정보관</a>
+                            <ul  class="myUL" >
+                                <li><a href="#" class="floor" name="1">1층</a></li>
+                                <li><a href="#" class="floor" name="2">2층</a></li>
+                                <li><a href="#" class="floor" name="3">3층</a></li>
+                                <li><a href="#" class="floor" name="4">4층</a></li>
+                                <li><a href="#" class="floor" name="5">5층</a></li>
                             </ul>
                         </li>
 
-                        <li><a class="building" href="#">산학 협력관</a>
+                        <li ><a class="building" name="산학협력관" href="#">산학 협력관</a>
                             <ul class="myUL">
-                                <li><a href="#">1층</a></li>
-                                <li><a href="#">2층</a></li>
-                                <li><a href="#">3층</a></li>
-                                <li><a href="#">4층</a></li>
-                                <li><a href="#">5층</a></li>
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
                             </ul>
                         </li>
 
@@ -128,44 +128,71 @@
                     this.childNodes[0].style.color="#fff";
                 });
             }
-        </script>
-
-        <script type="text/javascript" src="./script/building.js">
             
+            // document.querySelector('#test').addEventListener('click', ()=>{
+            //     console.log( document.querySelector('#test').name)
+            // })
+        </script>
+
+        <script type="text/javascript" src="./script/building.js">    
         </script>
 
 
-<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-        <!-- <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script> -->
-        <script type="text/javascript" src="key.json"></script>
-        <script>
-            firebase.initializeApp(firebaseConfig);
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+            <!-- <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script> -->
+            <script type="text/javascript" src="key.json"></script>
+            <script>
+                firebase.initializeApp(firebaseConfig);
 
-            var database = firebase.database();
-            var data;
-            const dbRef = firebase.database().ref('/');
-            dbRef.orderByChild("location").equalTo("삼성학술정보관").get().then((snapshot) => {
-              if ( snapshot.exists() ) {
-                data = snapshot.val()
+                var database = firebase.database();
+                var data;
+                const dbRef = firebase.database().ref('/');
+                dbRef.get().then((snapshot) => {
+                if ( snapshot.exists() ) {
+                    data = snapshot.val()
 
-              } else {
-                console.log("No data available");
-              }
-            }).catch((error) => {
-              console.error(error);
-            });
+                    floorList.forEach(element => {
+                        let building = element.parentNode.parentNode.parentNode.firstChild.name;
+                        let floor = element.name;
+                        let cardList = createCard( filterDataByBuilding(data, building, floor) );
+                        cardList.forEach(card => {
+                            element.parentNode.appendChild(card);
+                        });
 
-            // for (const [key, value] of Object.entries(temp)) {
-            //     if(value.floor == 2){
-            //         console.log(value);
-            //     }   
-            // }
-            // ref url
-            //  https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/database/Query
+                        element.addEventListener('click', ()=>{
+                            console.log("clicked");
+                            if( element === currentFloor ){
+                                removeActiveFloor(element);
+                                currentFloor = null;
+                            }else{
+                                if(currentFloor){
+                                    removeActiveFloor(currentFloor);
+                                }
+                                addActiveFloor(element);
+                                currentFloor = element;
+                            }
+                        })
+                    });
+
+                } else {
+                    console.log("No data available");
+                }
+                }).catch((error) => {
+                console.error(error);
+                });
+
+                // for (const [key, value] of Object.entries(temp)) {
+                //     if(value.floor == 2){
+                //         console.log(value);
+                //     }   
+                // }
+                // ref url
+                //  https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/database/Query
         </script>
+
 
     </body>
 </Html>

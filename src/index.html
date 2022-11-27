@@ -3,6 +3,9 @@
     <head>
         <title>제목</title>
         <meta charset="utf-8"/>
+        <!-- bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/space.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -82,15 +85,56 @@
 
                     </ul>
                 </div>
-                <div id="tab3" class="cont">
-                    Tab content 3
-                </div>
+            <div id="tab3" class="cont">
+                <div class="wrapper">
+                    <!-- 검색 -->
+                    <div class="search">
+                        <form action="">
+                            <input type="text" id="search_input" placeholder="검색">
+                        </form>
+
+                        <!-- <i class="fa-thin fa-check"></i> -->
+                    </div>
+                    <br>
+                    <!-- 내용 -->
+                    <div class="contents">
+                        <div class="multi-accordion">
+                            <details>
+                                <summary>공강인데 쉴 곳 없을까?</summary>
+                                <div class="content">공강</div>
+                            </details>
+                            <details>
+                                <summary>공부하기 좋은 장소는?</summary>
+                                <div class="content">
+                                    <!-- 필터링 -->
+                                    <div class="filter">
+                                        <div><button>조용한</button></div>
+                                        <div><button>생활소음</button></div>
+                                        <div><button>카페 분위기</button></div>
+                                        <div><button>편안한</button></div>
+                                        <div><button>개인 공간</button></div>
+                                    </div>
+                                    <!-- 정보 -->
+                                    <div class="info">
+                                        반도체관 1층
+                                        <div class="img_slot">
+                                            <img src="./assets/photo02.jpeg" alt="반도체관 1층 복도 중간">
+                                        </div>
+                                        상세 정보
+                                    </div>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>카페는 어디에 있지?</summary>
+                                <div class="content">카페</div>
+                            </details>
+                        </div>
+                    </div>
                 <div id="tab4" class="cont">
                     Tab content 4
                 </div>
             </div>
         </div>
-
         <script type="text/javascript">
             const tabList = document.querySelectorAll('.tab_menu .menu li');
             const contents = document.querySelectorAll('.cont_area .cont');
@@ -98,16 +142,37 @@
             const circleList = document.querySelectorAll('.tab_menu .menu li a');
             const iconList = document.querySelectorAll('.tab_menu .menu li a i');
 
-            let activeCont = '';
-            tabList[0].querySelector('.btn').addEventListener('click', function(e){
+        let activeCont = '';
+        tabList[0].querySelector('.btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            area.style.display = "none";
+            for (var j = 0; j < tabList.length; j++) {
+                circleList[j].style.backgroundColor = "#2E4623";
+                iconList[j].style.color = '#929292';
+                tabList[j].style.color = "#929292";
+            }
+        });
+        for (var i = 1; i < tabList.length; i++) {
+            tabList[i].querySelector('.btn').addEventListener('click', function (e) {
                 e.preventDefault();
-                area.style.display="none";
-                for(var j = 0; j< tabList.length; j++){
-                    circleList[j].style.backgroundColor="#2E4623";
-                    iconList[j].style.color='#929292';
-                    tabList[j].style.color="#929292";
+                for (var j = 1; j < tabList.length; j++) {
+                    area.style.display = 'block';
+                    tabList[j].classList.remove('is_on');
+                    contents[j].style.display = 'none';
+                    circleList[j].style.backgroundColor = "#2E4623";
+                    iconList[j].style.color = "#929292";
+                    tabList[j].style.color = '#929292';
                 }
+                this.parentNode.classList.add('is_on');
+                activeCont = this.getAttribute('href');
+                this.style.color = "#ffffff";
+                document.querySelector(activeCont).style.display = 'block';
+                this.style.backgroundColor = "#728975";
+                this.parentNode.style.color = "#ffffff";
+                this.childNodes[0].style.color = "#fff";
             });
+        }
+
             for(var i = 1; i < tabList.length; i++){
                 tabList[i].querySelector('.btn').addEventListener('click', function(e){
                     e.preventDefault();
@@ -191,8 +256,11 @@
                 // }
                 // ref url
                 //  https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/database/Query
-        </script>
-
-
-    </body>
+    </script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="./script/function.js"></script>
+</body>
 </Html>

@@ -1,78 +1,184 @@
-html, body{
-    width : 100%;
-    height : 100%;
-    margin : 0;
-    padding : 0;
-    border : none;					
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-nav{
-    position: fixed;
-    width: 108px;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    background: #2E4623;
+nav {
+  position: fixed;
+  width: 108px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #2e4623;
 }
 
 .menu {
-    height : 900px;
-    margin-top: 50px;
-    padding: 10px;
+  height: 900px;
+  margin-top: 50px;
+  padding: 10px;
 }
 .menu li {
-    list-style: none;
-    line-height: 30px;
-    color:#929292;
-    display:block;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 70px;
+  list-style: none;
+  line-height: 30px;
+  color: #929292;
+  display: block;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 70px;
 }
 .menu li a {
-    display:block; 
-    position:relative; 
-    padding:0px;
-    width: 90px;
-    height: 90px;
-    border: 0;
-    border-radius: 50%;
+  display: block;
+  position: relative;
+  padding: 0px;
+  width: 90px;
+  height: 90px;
+  border: 0;
+  border-radius: 50%;
 }
 .menu li a i {
-    position:absolute; 
-    top:20px;
-    left:50%; 
-    color:#929292; 
-    line-height:1em; 
-    white-space:nowrap; 
-    transform:translate(-50%, 0)
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  color: #929292;
+  line-height: 1em;
+  white-space: nowrap;
+  transform: translate(-50%, 0);
 }
-#wrap{
-    display:flex;
-    flex-direction: row;
-    height:100%;
+#wrap {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
-#map{
-    flex-grow: 1;
-    margin-left:108px;
-    top:0px;
+#map {
+  flex-grow: 1;
+  margin-left: 108px;
+  top: 0px;
 }
-iframe{
-    display:absolute;
-    width:100%;
-    height:100%;
-    border:0;
+iframe {
+  display: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 #rightDiv {
-    float:right;
-    background: #728975;
-    width: 512px;
+  float: right;
+  background: #728975;
+  width: 512px;
 }
 
-.cont{
-    display:none;
+.cont {
+  display: none;
+}
+
+/* 민혁 */
+.wrapper {
+  text-align: center;
+  justify-content: center;
+  color: white;
+  padding: 30px;
+}
+
+#search_input {
+  background-color: #b8bbb5;
+  width: 450px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.contents {
+  background-color: #728975;
+  text-align: start;
+}
+
+/* accordion */
+
+.multi-accordion {
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  padding: 0.5em 0.5em 0;
+  overflow: hidden;
+}
+
+.multi-accordion summary {
+  font-weight: bold;
+  /* margin: -0.5em -0.5em 0; */
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.multi-accordion details[open] summary {
+  /* border-bottom: 1px solid #aaa; */
+  margin-bottom: 0.5em;
+  background-color: #596d52;
+}
+.multi-accordion details:not(:first-child)[open] summary {
+  margin-top: 0.15em;
+  border-top: 1px solid #aaa;
+}
+.multi-accordion details[open] + details > summary {
+  border-top: 1px solid #aaa;
+}
+
+summary::marker {
+  content: "▷ ";
+  font-family: monospace;
+}
+details[open] summary::marker {
+  content: "▽ ";
+}
+
+/* accordion contents */
+.content {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.filter {
+  text-align: center;
+  /* background-color: #596d52; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.filter button {
+  margin: 5px 0px;
+  background-color: #d9d9d9;
+  color: #2e4623;
+  width: 110px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.info {
+  margin-top: 15px;
+  background-color: #b8bbb5;
+  border-radius: 5px;
+  padding: 20px;
+  color: #2e4623;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.img_slot {
+  background-color: #2e4623;
+  padding: 1px;
+}
+
+img {
+  width: 100%;
+}
+
+[open] {
+  background-color: #596d52;
 }

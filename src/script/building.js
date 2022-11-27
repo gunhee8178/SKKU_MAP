@@ -22,11 +22,11 @@ function removeActiveFloor(floor) {
 
 function filterDataByBuilding(data, building, floor){
     let filteredData = [];
-    
+
     for (const [key, value] of Object.entries(data)) {
         if( value.location == building && value.floor == parseInt(floor)){
             filteredData.push(value);
-        }   
+        }
     }
     return filteredData;
 }
@@ -34,7 +34,7 @@ function filterDataByBuilding(data, building, floor){
 function createCard(filteredData){
     let cardList = [];
     filteredData.forEach(element => {
-        
+
         let card = document.createElement("div");
         card.className = "card";
 
@@ -48,11 +48,11 @@ function createCard(filteredData){
 
         let h5 = document.createElement("h5");
         h5.className = "card-title"
-        h5.textContent = element.space;
+        h5.textContent = element.name;
 
         let p = document.createElement("p");
         p.className = "card-text";
-        p.innerHTML = element.equipment + "<br/>" + element.etc;
+        p.innerHTML = (element.equipment ? element.equipment : "" ) + "<br/>" + (element.etc ? element.etc : "");
 
         let a = document.createElement("a");
         a.href = element.url ? element.url : "#";
@@ -86,4 +86,3 @@ buildingList.forEach(building => {
         }
     });
 });
-

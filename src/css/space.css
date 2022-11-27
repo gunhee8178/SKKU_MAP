@@ -1,0 +1,116 @@
+.cont{
+    height: 100%;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+    
+    overflow: hidden;
+    
+    height: 60px;
+    width: 100%;
+
+    background-color: #B8BBB5;
+
+    text-align: center;
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+
+    padding: 6px;
+    border: none;
+
+    background-color: #B8BBB5;
+    height:auto;
+    /* margin-top: 8px;
+    margin-bottom: 8px; */
+
+    font-size: 17px;
+  }
+  
+  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+
+  #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  .myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  .myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+
+  /* https://www.w3schools.com */
+  li .myUL{
+    display: none;
+  }
+
+  li.activeBuilding .myUL{
+    display: block;
+   
+}
+
+li.activeBuilding a{
+    background-color: #999999;
+}
+
+.activeBuilding .myUL li a{
+    background-color: #bbbbbb;
+}
+
+li .card{
+  display: none;
+}
+
+li.activeFloor .card{
+  display: block;
+ 
+}
+
+.card{
+  border: black 2px solid;
+  margin: 5%;
+  /* margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%; */
+}
+
+

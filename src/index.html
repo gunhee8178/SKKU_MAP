@@ -1,40 +1,90 @@
 <!DOCTYPE html>
 <Html>
-
-<head>
-    <title>제목</title>
-    <meta charset="utf-8" />
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <head>
+        <title>제목</title>
+        <meta charset="utf-8"/>
+        <!-- bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/space.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+        <nav class="tab_menu">
+            <ul class="menu">
+                <li><a href="#tab1" class="btn" style="background-color:#2E4623"><i class="fa-solid fa-house fa-3x"></i></a>메인 페이지</li>
+                <li><a href="#tab2" class="btn"><i class="fa-solid fa-building fa-3x"></i></a>건물별 안내</li>
+                <li><a href="#tab3" class="btn"><i class="fa-solid fa-list-ul fa-3x"></i></a>기능별 안내</li>
+                <li><a href="#tab4" class="btn"><i class="fa-solid fa-graduation-cap fa-3x"></i></a>학과별 안내</li>
+            </ul>
+        </nav>
+        <div id="wrap">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.0501117395293!2d126.9732347160704!3d37.29394614744825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b42b61ce1867f%3A0xb38e2754eb2dbb08!2z7ISx6reg6rSA64yA7ZWZ6rWQIOyekOyXsOqzvO2Vmey6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1668576317453!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="cont_area" id="rightDiv" style="display:none">
+                <div id="tab1" class="cont">
+                    Tab content 1
+                </div>
+                <div id="tab2" class="cont">
+                    <div class="topnav">
+                        <input type="text" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <ul class="myUL">
+                        <li ><a class="building" name="1공학관" href="#">제1 공학관</a>
+                            <ul class="myUL">
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
+                            </ul>
+                        </li>
 
-<body>
-    <nav class="tab_menu">
-        <ul class="menu">
-            <li><a href="#tab1" class="btn" style="background-color:#2E4623"><i
-                        class="fa-solid fa-house fa-3x"></i></a>메인 페이지</li>
-            <li><a href="#tab2" class="btn"><i class="fa-solid fa-building fa-3x"></i></a>건물별 안내</li>
-            <li><a href="#tab3" class="btn"><i class="fa-solid fa-list-ul fa-3x"></i></a>기능별 안내</li>
-            <li><a href="#tab4" class="btn"><i class="fa-solid fa-graduation-cap fa-3x"></i></a>학과별 안내</li>
-        </ul>
-    </nav>
-    <div id="wrap">
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.0501117395293!2d126.9732347160704!3d37.29394614744825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b42b61ce1867f%3A0xb38e2754eb2dbb08!2z7ISx6reg6rSA64yA7ZWZ6rWQIOyekOyXsOqzvO2Vmey6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1668576317453!5m2!1sko!2skr"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="cont_area" id="rightDiv" style="display:none">
-            <div id="tab1" class="cont">
-                Tab content 1
-            </div>
-            <div id="tab2" class="cont">
-                Tab content 2
-            </div>
+                        <li ><a class="building" name="2공학관" href="#">제2 공학관</a>
+                            <ul class="myUL">
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li ><a class="building" name="반도체관" href="#">반도체관</a>
+                            <ul class="myUL">
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li ><a class="building" name="삼성학술정보관" href="#">삼성 학술 정보관</a>
+                            <ul  class="myUL" >
+                                <li><a href="#" class="floor" name="1">1층</a></li>
+                                <li><a href="#" class="floor" name="2">2층</a></li>
+                                <li><a href="#" class="floor" name="3">3층</a></li>
+                                <li><a href="#" class="floor" name="4">4층</a></li>
+                                <li><a href="#" class="floor" name="5">5층</a></li>
+                            </ul>
+                        </li>
+
+                        <li ><a class="building" name="산학협력관" href="#">산학 협력관</a>
+                            <ul class="myUL">
+                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="2" >2층</a></li>
+                                <li><a href="#" class="floor" name="3" >3층</a></li>
+                                <li><a href="#" class="floor" name="4" >4층</a></li>
+                                <li><a href="#" class="floor" name="5" >5층</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
             <div id="tab3" class="cont">
                 <div class="wrapper">
                     <!-- 검색 -->
@@ -80,20 +130,17 @@
                             </details>
                         </div>
                     </div>
+                <div id="tab4" class="cont">
+                    Tab content 4
                 </div>
             </div>
-            <div id="tab4" class="cont">
-                Tab content 4
-            </div>
         </div>
-    </div>
-
-    <script type="text/javascript">
-        const tabList = document.querySelectorAll('.tab_menu .menu li');
-        const contents = document.querySelectorAll('.cont_area .cont');
-        const area = document.querySelector('.cont_area');
-        const circleList = document.querySelectorAll('.tab_menu .menu li a');
-        const iconList = document.querySelectorAll('.tab_menu .menu li a i');
+        <script type="text/javascript">
+            const tabList = document.querySelectorAll('.tab_menu .menu li');
+            const contents = document.querySelectorAll('.cont_area .cont');
+            const area = document.querySelector('.cont_area');
+            const circleList = document.querySelectorAll('.tab_menu .menu li a');
+            const iconList = document.querySelectorAll('.tab_menu .menu li a i');
 
         let activeCont = '';
         tabList[0].querySelector('.btn').addEventListener('click', function (e) {
@@ -125,6 +172,90 @@
                 this.childNodes[0].style.color = "#fff";
             });
         }
+
+            for(var i = 1; i < tabList.length; i++){
+                tabList[i].querySelector('.btn').addEventListener('click', function(e){
+                    e.preventDefault();
+                    for(var j = 1; j< tabList.length; j++){
+                        area.style.display='block';
+                        tabList[j].classList.remove('is_on');
+                        contents[j].style.display='none';
+                        circleList[j].style.backgroundColor="#2E4623";
+                        iconList[j].style.color="#929292";
+                        tabList[j].style.color='#929292';
+                    }
+                    this.parentNode.classList.add('is_on');
+                    activeCont = this.getAttribute('href');
+                    this.style.color="#ffffff";
+                    document.querySelector(activeCont).style.display = 'block';
+                    this.style.backgroundColor="#728975";
+                    this.parentNode.style.color="#ffffff";
+                    this.childNodes[0].style.color="#fff";
+                });
+            }
+            
+            // document.querySelector('#test').addEventListener('click', ()=>{
+            //     console.log( document.querySelector('#test').name)
+            // })
+        </script>
+
+        <script type="text/javascript" src="./script/building.js">    
+        </script>
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+            <!-- <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script> -->
+            <script type="text/javascript" src="key.json"></script>
+            <script>
+                firebase.initializeApp(firebaseConfig);
+
+                var database = firebase.database();
+                var data;
+                const dbRef = firebase.database().ref('/');
+                dbRef.get().then((snapshot) => {
+                if ( snapshot.exists() ) {
+                    data = snapshot.val()
+
+                    floorList.forEach(element => {
+                        let building = element.parentNode.parentNode.parentNode.firstChild.name;
+                        let floor = element.name;
+                        let cardList = createCard( filterDataByBuilding(data, building, floor) );
+                        cardList.forEach(card => {
+                            element.parentNode.appendChild(card);
+                        });
+
+                        element.addEventListener('click', ()=>{
+                            console.log("clicked");
+                            if( element === currentFloor ){
+                                removeActiveFloor(element);
+                                currentFloor = null;
+                            }else{
+                                if(currentFloor){
+                                    removeActiveFloor(currentFloor);
+                                }
+                                addActiveFloor(element);
+                                currentFloor = element;
+                            }
+                        })
+                    });
+
+                } else {
+                    console.log("No data available");
+                }
+                }).catch((error) => {
+                console.error(error);
+                });
+
+                // for (const [key, value] of Object.entries(temp)) {
+                //     if(value.floor == 2){
+                //         console.log(value);
+                //     }   
+                // }
+                // ref url
+                //  https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/database/Query
     </script>
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -132,5 +263,4 @@
         crossorigin="anonymous"></script>
     <script src="./script/function.js"></script>
 </body>
-
 </Html>

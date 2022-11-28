@@ -1,89 +1,89 @@
-const buildingList = document.querySelectorAll('.building');
+const buildingList = document.querySelectorAll(".building");
 let currentActive = null;
 
-const floorList = document.querySelectorAll('.floor');
+const floorList = document.querySelectorAll(".floor");
 let currentFloor = null;
 
 function addActiveBuilding(building) {
-    building.parentNode.classList.add("activeBuilding");
+  building.parentNode.classList.add("activeBuilding");
 }
 
 function removeActiveBuilding(building) {
-    building.parentNode.classList.remove("activeBuilding");
+  building.parentNode.classList.remove("activeBuilding");
 }
 
 function addActiveFloor(floor) {
-    floor.parentNode.classList.add("activeFloor");
+  floor.parentNode.classList.add("activeFloor");
 }
 
 function removeActiveFloor(floor) {
-    floor.parentNode.classList.remove("activeFloor");
+  floor.parentNode.classList.remove("activeFloor");
 }
 
-function filterDataByBuilding(data, building, floor){
-    let filteredData = [];
-    
-    for (const [key, value] of Object.entries(data)) {
-        if( value.location == building && value.floor == parseInt(floor)){
-            filteredData.push(value);
-        }   
+function filterDataByBuilding(data, building, floor) {
+  let filteredData = [];
+
+  for (const [key, value] of Object.entries(data)) {
+    if (value.location == building && value.floor == parseInt(floor)) {
+      filteredData.push(value);
     }
-    return filteredData;
+  }
+  return filteredData;
 }
 
-function createCard(filteredData){
-    let cardList = [];
-    filteredData.forEach(element => {
-        
-        let card = document.createElement("div");
-        card.className = "card";
+function createCard(filteredData) {
+  let cardList = [];
+  filteredData.forEach((element) => {
+    let card = document.createElement("div");
+    card.className = "card";
 
-        let img = document.createElement("img");
-        img.className = "card-img-top";
-        img.src = element.img ? element.img : "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Froom-studyroom.gif?alt=media&token=0e1464fd-d112-4a07-bc7e-3bcdb36274f6";
-        img.alt = "Card image cap"
+    let img = document.createElement("img");
+    img.className = "card-img-top";
+    img.src = element.img
+      ? element.img
+      : "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Froom-studyroom.gif?alt=media&token=0e1464fd-d112-4a07-bc7e-3bcdb36274f6";
+    img.alt = "Card image cap";
 
-        let cardBody = document.createElement("div");
-        cardBody.className = "card-body";
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
 
-        let h5 = document.createElement("h5");
-        h5.className = "card-title"
-        h5.textContent = element.space;
+    let h5 = document.createElement("h5");
+    h5.className = "card-title";
+    h5.textContent = element.space;
 
-        let p = document.createElement("p");
-        p.className = "card-text";
-        p.innerHTML = element.equipment + "<br/>" + element.etc;
+    let p = document.createElement("p");
+    p.className = "card-text";
+    p.innerHTML = element.equipment + "<br/>" + element.etc;
 
-        let a = document.createElement("a");
-        a.href = element.url ? element.url : "#";
+    let a = document.createElement("a");
+    a.href = element.url ? element.url : "#";
 
-        cardBody.appendChild(h5);
-        cardBody.appendChild(p);
-        cardBody.appendChild(a);
+    cardBody.appendChild(h5);
+    cardBody.appendChild(p);
+    cardBody.appendChild(a);
 
-        card.appendChild(img);
-        card.appendChild(cardBody);
+    card.appendChild(img);
+    card.appendChild(cardBody);
 
-        cardList.push(card);
-    });
-    return cardList;
+    cardList.push(card);
+  });
+  return cardList;
 }
 
-buildingList.forEach(building => {
-    building.addEventListener('click', ()=>{
-        if( building === currentActive ){
-            removeActiveBuilding(building);
-            currentActive = null;
-        }else{
-            if(currentActive){
-                removeActiveBuilding(currentActive);
-            }
-            if(currentFloor){
-                removeActiveFloor(currentFloor);
-            }
-            addActiveBuilding(building);
-            currentActive = building;
-        }
-    });
+buildingList.forEach((building) => {
+  building.addEventListener("click", () => {
+    if (building === currentActive) {
+      removeActiveBuilding(building);
+      currentActive = null;
+    } else {
+      if (currentActive) {
+        removeActiveBuilding(currentActive);
+      }
+      if (currentFloor) {
+        removeActiveFloor(currentFloor);
+      }
+      addActiveBuilding(building);
+      currentActive = building;
+    }
+  });
 });
-

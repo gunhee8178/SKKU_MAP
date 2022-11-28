@@ -113,4 +113,9 @@ li.activeFloor .card{
   margin-right: 5%; */
 }
 
+.card .card-img-top{
+  max-width: 300px;
+  max-height: 300px;
+}
+
 

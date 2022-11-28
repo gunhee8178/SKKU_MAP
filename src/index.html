@@ -30,38 +30,33 @@
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
                     <ul class="myUL">
-                        <li ><a class="building" name="1공학관" href="#">제1 공학관</a>
+                        <li ><a class="building" name="제1공학관" href="#">제1 공학관</a>
                             <ul class="myUL">
-                                <li><a href="#" class="floor" name="1" >1층</a></li>
                                 <li><a href="#" class="floor" name="2" >2층</a></li>
                                 <li><a href="#" class="floor" name="3" >3층</a></li>
-                                <li><a href="#" class="floor" name="4" >4층</a></li>
-                                <li><a href="#" class="floor" name="5" >5층</a></li>
+                                <li><a href="#" class="floor" name="6" >5층</a></li>
                             </ul>
                         </li>
 
-                        <li ><a class="building" name="2공학관" href="#">제2 공학관</a>
+                        <li ><a class="building" name="제2공학관" href="#">제2 공학관</a>
                             <ul class="myUL">
-                                <li><a href="#" class="floor" name="1" >1층</a></li>
+                                <li><a href="#" class="floor" name="-1" >지하 1층</a></li>
                                 <li><a href="#" class="floor" name="2" >2층</a></li>
                                 <li><a href="#" class="floor" name="3" >3층</a></li>
-                                <li><a href="#" class="floor" name="4" >4층</a></li>
-                                <li><a href="#" class="floor" name="5" >5층</a></li>
                             </ul>
                         </li>
 
                         <li ><a class="building" name="반도체관" href="#">반도체관</a>
                             <ul class="myUL">
                                 <li><a href="#" class="floor" name="1" >1층</a></li>
-                                <li><a href="#" class="floor" name="2" >2층</a></li>
-                                <li><a href="#" class="floor" name="3" >3층</a></li>
-                                <li><a href="#" class="floor" name="4" >4층</a></li>
                                 <li><a href="#" class="floor" name="5" >5층</a></li>
+                                <li><a href="#" class="floor" name="6" >6층</a></li>
                             </ul>
                         </li>
 
                         <li ><a class="building" name="삼성학술정보관" href="#">삼성 학술 정보관</a>
                             <ul  class="myUL" >
+                                <li><a href="#" class="floor" name="-1">지하 1층</a></li>
                                 <li><a href="#" class="floor" name="1">1층</a></li>
                                 <li><a href="#" class="floor" name="2">2층</a></li>
                                 <li><a href="#" class="floor" name="3">3층</a></li>
@@ -73,10 +68,6 @@
                         <li ><a class="building" name="산학협력관" href="#">산학 협력관</a>
                             <ul class="myUL">
                                 <li><a href="#" class="floor" name="1" >1층</a></li>
-                                <li><a href="#" class="floor" name="2" >2층</a></li>
-                                <li><a href="#" class="floor" name="3" >3층</a></li>
-                                <li><a href="#" class="floor" name="4" >4층</a></li>
-                                <li><a href="#" class="floor" name="5" >5층</a></li>
                             </ul>
                         </li>
 
@@ -149,7 +140,7 @@
 
                 var database = firebase.database();
                 var data;
-                const dbRef = firebase.database().ref('/');
+                const dbRef = firebase.database().ref('/space');
                 dbRef.get().then((snapshot) => {
                 if ( snapshot.exists() ) {
                     data = snapshot.val()
@@ -157,13 +148,14 @@
                     floorList.forEach(element => {
                         let building = element.parentNode.parentNode.parentNode.firstChild.name;
                         let floor = element.name;
+                        <!-- console.log(building, floor, filterDataByBuilding(data, building, floor)); -->
                         let cardList = createCard( filterDataByBuilding(data, building, floor) );
                         cardList.forEach(card => {
                             element.parentNode.appendChild(card);
                         });
 
                         element.addEventListener('click', ()=>{
-                            console.log("clicked");
+                            <!-- console.log("clicked"); -->
                             if( element === currentFloor ){
                                 removeActiveFloor(element);
                                 currentFloor = null;

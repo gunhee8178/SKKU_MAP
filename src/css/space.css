@@ -105,6 +105,10 @@ li.activeFloor .card{
  
 } */
 
+.alert{
+  margin-top: 5%;
+}
+
 .card{
   border: black 2px solid;
   margin: 5%;

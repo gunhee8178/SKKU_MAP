@@ -6,8 +6,13 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/space.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        
+        <!-- load boot strap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body>
+        
         <nav class="tab_menu">
             <ul class="menu">
                 <li><a href="#tab1" class="btn" style="background-color:#2E4623"><i class="fa-solid fa-house fa-3x"></i></a>메인 페이지</li>
@@ -25,16 +30,248 @@
                     Tab content 1
                 </div>
                 <div id="tab2" class="cont">
-                    <div class="topnav">
-                        <input type="text" placeholder="Search..">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                    <div class="wrapper">
+                        <div class="search">
+                            <form action="">
+                                <input type="text" id="search_input" placeholder="검색">
+                            </form>
+                        </div>
+                        <!-- https://getbootstrap.com/docs/5.0/components/accordion/#sass -->
+                        
+                        <div class="accordion accordion-flush" id="accordionFlushBuilding">
+                            <div class="accordion-item building">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button value="제1공학관" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  제1 공학관
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body">
+                                    <div class="accordion accordion-flush" id="accordionFlushOne">
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingOne2nd">
+                                            <button value=2 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2nd" aria-expanded="false" aria-controls="flush-collapseOne2nd">
+                                              2층
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseOne2nd" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushOne">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingOne3rd">
+                                            <button value=3 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne3rd" aria-expanded="false" aria-controls="flush-collapseOne3rd">
+                                              3층
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseOne3rd" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3rd" data-bs-parent="#accordionFlushOne">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingOne6th">
+                                              <button value=6 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne6th" aria-expanded="false" aria-controls="flush-collapseOne6th">
+                                                  6층
+                                              </button>
+                                          </h2>
+                                          <div id="flush-collapseOne6th" class="accordion-collapse collapse" aria-labelledby="flush-headingOne6th" data-bs-parent="#accordionFlushOne">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item building">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button value="제2공학관" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  제2 공학관
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body">
+                                    <div class="accordion accordion-flush" id="accordionFlushTwo">
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingTwoM1st">
+                                            <button value=-1 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoM1st" aria-expanded="false" aria-controls="flush-collapseTwoM1st">
+                                              지하 1층
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseTwoM1st" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushTwo">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingTwo2nd">
+                                            <button value=2 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2nd" aria-expanded="false" aria-controls="flush-collapseTwo2nd">
+                                              2층
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseTwo2nd" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo2nd" data-bs-parent="#accordionFlushTwo">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingTwo3rd">
+                                              <button value=3 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo3rd" aria-expanded="false" aria-controls="flush-collapseTwo3rd">
+                                                  3층
+                                              </button>
+                                          </h2>
+                                          <div id="flush-collapseTwo3rd" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo3rd" data-bs-parent="#accordionFlushTwo">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item building">
+                              <h2 class="accordion-header" id="flush-headingSemi">
+                                <button value="반도체관" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSemi" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  반도체관
+                                </button>
+                              </h2>
+                              <div id="flush-collapseSemi" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body">
+                                    <div class="accordion accordion-flush" id="accordionFlushSemi">
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingSemi1st">
+                                            <button value=1 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSemi1st" aria-expanded="false" aria-controls="flush-collapseSemi1st">
+                                              1층
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseSemi1st" class="accordion-collapse collapse" aria-labelledby="flush-headingSemi" data-bs-parent="#accordionFlushSemi">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingSemi5th">
+                                            <button value=5 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSemi5th" aria-expanded="false" aria-controls="flush-collapseSemi5th">
+                                              5층
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseSemi5th" class="accordion-collapse collapse" aria-labelledby="flush-headingSemi5th" data-bs-parent="#accordionFlushSemi">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item floor">
+                                          <h2 class="accordion-header" id="flush-headingSemi6th">
+                                              <button value=6 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSemi6th" aria-expanded="false" aria-controls="flush-collapseSemi6th">
+                                                  6층
+                                              </button>
+                                          </h2>
+                                          <div id="flush-collapseSemi6th" class="accordion-collapse collapse" aria-labelledby="flush-headingSemi6th" data-bs-parent="#accordionFlushSemi">
+                                              <div class="accordion-body"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item building">
+                                <h2 class="accordion-header" id="flush-headingLib">
+                                  <button value="삼성학술정보관" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLib" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    삼성 학술 정보관
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseLib" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushBuilding">
+                                    <div class="accordion-body">
+                                        <div class="accordion accordion-flush" id="accordionFlushLib">
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingLibM1st">
+                                                <button value=-1 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLibM1st" aria-expanded="false" aria-controls="flush-collapseLibM1st">
+                                                  지하 1층
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseLibM1st" class="accordion-collapse collapse" aria-labelledby="flush-headingLib" data-bs-parent="#accordionFlushLib">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingLib1st">
+                                                <button value=1 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLib1st" aria-expanded="false" aria-controls="flush-collapseLib1st">
+                                                  1층
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseLib1st" class="accordion-collapse collapse" aria-labelledby="flush-headingLib1st" data-bs-parent="#accordionFlushLib">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingLib2nd">
+                                                  <button value=2 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLib2nd" aria-expanded="false" aria-controls="flush-collapseLib2nd">
+                                                      2층
+                                                  </button>
+                                              </h2>
+                                              <div id="flush-collapseLib2nd" class="accordion-collapse collapse" aria-labelledby="flush-headingLib2nd" data-bs-parent="#accordionFlushLib">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingLib3rd">
+                                                  <button value=3 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLib3rd" aria-expanded="false" aria-controls="flush-collapseLib3rd">
+                                                      3층
+                                                  </button>
+                                              </h2>
+                                              <div id="flush-collapseLib3rd" class="accordion-collapse collapse" aria-labelledby="flush-headingLib3rd" data-bs-parent="#accordionFlushLib">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingLib4th">
+                                                  <button value=4 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLib4th" aria-expanded="false" aria-controls="flush-collapseLib4th">
+                                                      4층
+                                                  </button>
+                                              </h2>
+                                              <div id="flush-collapseLib4th" class="accordion-collapse collapse" aria-labelledby="flush-headingLib4th" data-bs-parent="#accordionFlushLib">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingLib5th">
+                                                  <button value=5 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLib5th" aria-expanded="false" aria-controls="flush-collapseLib5th">
+                                                      5층
+                                                  </button>
+                                              </h2>
+                                              <div id="flush-collapseLib5th" class="accordion-collapse collapse" aria-labelledby="flush-headingLib5th" data-bs-parent="#accordionFlushLib">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item building">
+                                <h2 class="accordion-header" id="flush-headingInd">
+                                  <button value="산학협력관" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInd" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    산학 협력관
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseInd" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushBuilding">
+                                    <div class="accordion-body">
+                                        <div class="accordion accordion-flush" id="accordionFlushInd">
+                                            <div class="accordion-item floor">
+                                              <h2 class="accordion-header" id="flush-headingInd1st">
+                                                <button value=1 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInd1st" aria-expanded="false" aria-controls="flush-collapseInd1st">
+                                                  1층
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseInd1st" class="accordion-collapse collapse" aria-labelledby="flush-headingInd1st" data-bs-parent="#accordionFlushInd">
+                                                  <div class="accordion-body"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="myUL">
+                    <!-- <ul class="myUL">
                         <li ><a class="building" name="제1공학관" href="#">제1 공학관</a>
                             <ul class="myUL">
                                 <li><a href="#" class="floor" name="2" >2층</a></li>
                                 <li><a href="#" class="floor" name="3" >3층</a></li>
-                                <li><a href="#" class="floor" name="6" >5층</a></li>
+                                <li><a href="#" class="floor" name="6" >6층</a></li>
                             </ul>
                         </li>
 
@@ -71,7 +308,8 @@
                             </ul>
                         </li>
 
-                    </ul>
+                    </ul> -->
+                    
                 </div>
                 <div id="tab3" class="cont">
                     Tab content 3
@@ -141,33 +379,21 @@
                 var database = firebase.database();
                 var data;
                 const dbRef = firebase.database().ref('/space');
+
                 dbRef.get().then((snapshot) => {
                 if ( snapshot.exists() ) {
                     data = snapshot.val()
 
                     floorList.forEach(element => {
-                        let building = element.parentNode.parentNode.parentNode.firstChild.name;
-                        let floor = element.name;
-                        <!-- console.log(building, floor, filterDataByBuilding(data, building, floor)); -->
+                        let building = element.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].value;
+                        let floor = element.childNodes[1].childNodes[1].value;
+                        console.log(building, floor)
                         let cardList = createCard( filterDataByBuilding(data, building, floor) );
                         cardList.forEach(card => {
-                            element.parentNode.appendChild(card);
+                            element.childNodes[3].childNodes[1].appendChild(card);
                         });
 
-                        element.addEventListener('click', ()=>{
-                            <!-- console.log("clicked"); -->
-                            if( element === currentFloor ){
-                                removeActiveFloor(element);
-                                currentFloor = null;
-                            }else{
-                                if(currentFloor){
-                                    removeActiveFloor(currentFloor);
-                                }
-                                addActiveFloor(element);
-                                currentFloor = element;
-                            }
-                        })
-                    });
+                    }); 
 
                 } else {
                     console.log("No data available");

@@ -88,26 +88,27 @@
    
 }
 
-li.activeBuilding a{
+/* li.activeBuilding a{
     background-color: #999999;
 }
 
 .activeBuilding .myUL li a{
     background-color: #bbbbbb;
-}
+} */
 
-li .card{
+/* li .card{
   display: none;
 }
 
 li.activeFloor .card{
   display: block;
  
-}
+} */
 
 .card{
   border: black 2px solid;
   margin: 5%;
+  align-items: center;
   /* margin-top: 10px;
   margin-left: 5%;
   margin-right: 5%; */
@@ -117,5 +118,4 @@ li.activeFloor .card{
   max-width: 300px;
   max-height: 300px;
 }
-
-
+/* https://getbootstrap.com/docs/5.0/components/accordion/#sass */

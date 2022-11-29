@@ -1,24 +1,32 @@
-const buildingList = document.querySelectorAll('.building');
+const buildingList = document.querySelectorAll(".building");
 let currentActive = null;
 
-const floorList = document.querySelectorAll('.floor');
+const floorList = document.querySelectorAll(".floor");
 let currentFloor = null;
 
 function addActiveBuilding(building) {
-    building.parentNode.classList.add("activeBuilding");
+  building.parentNode.classList.add("activeBuilding");
 }
 
 function removeActiveBuilding(building) {
-    building.parentNode.classList.remove("activeBuilding");
+  building.parentNode.classList.remove("activeBuilding");
 }
 
 function addActiveFloor(floor) {
-    floor.parentNode.classList.add("activeFloor");
+  floor.parentNode.classList.add("activeFloor");
 }
 
 function removeActiveFloor(floor) {
-    floor.parentNode.classList.remove("activeFloor");
+  floor.parentNode.classList.remove("activeFloor");
 }
+
+
+function filterDataByBuilding(data, building, floor) {
+  let filteredData = [];
+
+  for (const [key, value] of Object.entries(data)) {
+    if (value.location == building && value.floor == parseInt(floor)) {
+      filteredData.push(value);
 
 function filterDataByBuilding(data, building, floor){
     let filteredData = [];
@@ -27,9 +35,12 @@ function filterDataByBuilding(data, building, floor){
         if( value.location == building && value.floor == parseInt(floor)){
             filteredData.push(value);
         }
+
     }
-    return filteredData;
+  }
+  return filteredData;
 }
+
 
 function createCard(filteredData){
     let cardList = [];
@@ -43,8 +54,10 @@ function createCard(filteredData){
         img.src = element.img ? element.img : "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=973e7766-366f-4ffb-bf20-0827534a4227";
         img.alt = "Card image cap"
 
-        let cardBody = document.createElement("div");
-        cardBody.className = "card-body";
+
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+
 
         let h5 = document.createElement("h5");
         h5.className = "card-title"
@@ -54,20 +67,22 @@ function createCard(filteredData){
         p.className = "card-text";
         p.innerHTML = (element.purpose? (element.purpose + "<br/>") : "") + (element.semester_time? (element.semester_time + "<br/>") : "") + (element.equipment? (element.equipment+ "<br/>") : "")  + (element.etc? element.etc: "");
 
-        let a = document.createElement("a");
-        a.href = element.url ? element.url : "#";
 
-        cardBody.appendChild(h5);
-        cardBody.appendChild(p);
-        cardBody.appendChild(a);
+    let a = document.createElement("a");
+    a.href = element.url ? element.url : "#";
 
-        card.appendChild(img);
-        card.appendChild(cardBody);
+    cardBody.appendChild(h5);
+    cardBody.appendChild(p);
+    cardBody.appendChild(a);
 
-        cardList.push(card);
-    });
-    return cardList;
+    card.appendChild(img);
+    card.appendChild(cardBody);
+
+    cardList.push(card);
+  });
+  return cardList;
 }
+
 
 // buildingList.forEach(building => {
 //     building.addEventListener('click', ()=>{
@@ -86,4 +101,5 @@ function createCard(filteredData){
 //         }
 //     });
 // });
+
 

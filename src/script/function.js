@@ -71,9 +71,11 @@ $(function () {
     if (check_arr[num] % 2 === 1) {
       $(event.target).css("background-color", "#2E4623");
       $(event.target).css("color", "#d9d9d9");
+      $(event.target).attr("class", "on-btn");
     } else {
       $(event.target).css("background-color", "#d9d9d9");
       $(event.target).css("color", "#2E4623");
+      $(event.target).attr("class", "off-btn");
     }
   };
   $("#silence-btn").click((event) => {

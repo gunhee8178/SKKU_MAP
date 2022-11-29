@@ -149,3 +149,12 @@
     border-radius: calc(.25rem - 1px)
 }
 /* https://getbootstrap.com/docs/5.0/components/accordion/#sass */
+
+
+li .card{
+  display:none;
+}
+
+li.activeTime .card{
+  display:block;
+}

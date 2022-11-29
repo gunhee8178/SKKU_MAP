@@ -22,10 +22,7 @@ function filterDataByTime(data, time){
         } 
         else if(time == "주말" && value.semester_time.indexOf('일'||'토')>-1){
             filteredData.push(value);
-        }
-        else {
-            //얘를 어떻게 필터링해야 할까용???
-        }  
+        } 
     }
     return filteredData;
 }

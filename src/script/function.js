@@ -20,47 +20,47 @@ $(function () {
   /**
    * db 호출
    */
-  var data;
-  const dbRef = firebase.database().ref("/space");
-  dbRef
-    .get()
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        data = snapshot.val();
+  // var data;
+  // const dbRef = firebase.database().ref("/space");
+  // dbRef
+  //   .get()
+  //   .then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       data = snapshot.val();
 
-        console.log(data);
-        floorList.forEach((element) => {
-          let building =
-            element.parentNode.parentNode.parentNode.firstChild.name;
-          let floor = element.name;
-          let cardList = createCard(
-            filterDataByBuilding(data, building, floor)
-          );
-          cardList.forEach((card) => {
-            element.parentNode.appendChild(card);
-          });
+  //       console.log(data);
+  //       floorList.forEach((element) => {
+  //         let building =
+  //           element.parentNode.parentNode.parentNode.firstChild.name;
+  //         let floor = element.name;
+  //         let cardList = createCard(
+  //           filterDataByBuilding(data, building, floor)
+  //         );
+  //         cardList.forEach((card) => {
+  //           element.parentNode.appendChild(card);
+  //         });
 
-          element.addEventListener("click", () => {
-            console.log("clicked");
-            if (element === currentFloor) {
-              removeActiveFloor(element);
-              currentFloor = null;
-            } else {
-              if (currentFloor) {
-                removeActiveFloor(currentFloor);
-              }
-              addActiveFloor(element);
-              currentFloor = element;
-            }
-          });
-        });
-      } else {
-        console.log("No data available");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+  //         element.addEventListener("click", () => {
+  //           console.log("clicked");
+  //           if (element === currentFloor) {
+  //             removeActiveFloor(element);
+  //             currentFloor = null;
+  //           } else {
+  //             if (currentFloor) {
+  //               removeActiveFloor(currentFloor);
+  //             }
+  //             addActiveFloor(element);
+  //             currentFloor = element;
+  //           }
+  //         });
+  //       });
+  //     } else {
+  //       console.log("No data available");
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
 
   /**
    * 버튼 토글 기능

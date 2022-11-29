@@ -6,9 +6,9 @@
 
 /* Add a black background color to the top navigation bar */
 .topnav {
-    
+
     overflow: hidden;
-    
+
     height: 60px;
     width: 100%;
 
@@ -16,7 +16,7 @@
 
     text-align: center;
   }
-  
+
   /* Style the search box inside the navigation bar */
   .topnav input[type=text] {
 
@@ -30,7 +30,7 @@
 
     font-size: 17px;
   }
-  
+
   /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
   @media screen and (max-width: 600px) {
     .topnav a, .topnav input[type=text] {
@@ -55,14 +55,14 @@
     border: 1px solid #ddd; /* Add a grey border */
     margin-bottom: 12px; /* Add some space below the input */
   }
-  
+
   .myUL {
     /* Remove default list styling */
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .myUL li a {
     border: 1px solid #ddd; /* Add a border to all links */
     margin-top: -1px; /* Prevent double borders */
@@ -73,7 +73,7 @@
     color: black; /* Add a black text color */
     display: block; /* Make it into a block element to fill the whole list */
   }
-  
+
   .myUL li a:hover:not(.header) {
     background-color: #eee; /* Add a hover effect to all links, except for headers */
   }
@@ -85,37 +85,67 @@
 
   li.activeBuilding .myUL{
     display: block;
-   
 }
 
-li.activeBuilding a{
-    background-color: #999999;
+#accordionFlushBuilding{
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
-.activeBuilding .myUL li a{
-    background-color: #bbbbbb;
+.accordion-item .accordion-button{
+    /* border: 2px white solid; */
+    background: #728975;
+    color: white
+}
+.accordion-item .accordion-button:not(.collapsed) {
+    background: #596D52;
+    color: white;
 }
 
-li .card{
-  display: none;
+.accordion-body{
+    background: #596D52;
 }
 
-li.activeFloor .card{
-  display: block;
- 
+.accordion-button::before{
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 20px;
+    content: "";
+    background-image: url("./icon_right.svg");
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); */
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
 }
 
-.card{
-  border: black 2px solid;
-  margin: 5%;
-  /* margin-top: 10px;
-  margin-left: 5%;
-  margin-right: 5%; */
+.accordion-button:not(.collapsed)::before {
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e); */
+    width: 20px;
+    height: 20px;
+    background-image: url("./icon_right.svg");
+    transform: rotate(90deg);
+}
+
+.accordion-button::after{
+    visibility: hidden;
+}
+
+.alert{
+  margin-top: 5%;
+}
+
+.accordion-body .card{
+    background-color: #B8BBB5;
+    margin: 5%;
+    align-items: center;
+    color: #2E4623;
 }
 
 .card .card-img-top{
-  max-width: 300px;
-  max-height: 300px;
+    margin: 3%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: calc(.25rem - 1px)
 }
-
-
+/* https://getbootstrap.com/docs/5.0/components/accordion/#sass */

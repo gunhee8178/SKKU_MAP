@@ -69,20 +69,21 @@ function createCard(filteredData){
     return cardList;
 }
 
-buildingList.forEach(building => {
-    building.addEventListener('click', ()=>{
-        if( building === currentActive ){
-            removeActiveBuilding(building);
-            currentActive = null;
-        }else{
-            if(currentActive){
-                removeActiveBuilding(currentActive);
-            }
-            if(currentFloor){
-                removeActiveFloor(currentFloor);
-            }
-            addActiveBuilding(building);
-            currentActive = building;
-        }
-    });
-});
+// buildingList.forEach(building => {
+//     building.addEventListener('click', ()=>{
+//         if( building === currentActive ){
+//             removeActiveBuilding(building);
+//             currentActive = null;
+//         }else{
+//             if(currentActive){
+//                 removeActiveBuilding(currentActive);
+//             }
+//             if(currentFloor){
+//                 removeActiveFloor(currentFloor);
+//             }
+//             addActiveBuilding(building);
+//             currentActive = building;
+//         }
+//     });
+// });
+

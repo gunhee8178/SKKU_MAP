@@ -32,10 +32,10 @@ function createTimeCard(filteredData, time){
     filteredData.forEach(element => {
         
         let card = document.createElement("div");
-        card.className = "card";
+        card.className = "card card-time";
 
         let img = document.createElement("img");
-        img.className = "card-img-top";
+        img.className = "card-img-mid";
         img.src = element.img ? element.img : "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Froom-studyroom.gif?alt=media&token=0e1464fd-d112-4a07-bc7e-3bcdb36274f6";
         img.alt = "Card image cap"
 
@@ -64,12 +64,13 @@ function createTimeCard(filteredData, time){
         }
 
         cardBody.appendChild(h5);
+        cardBody.appendChild(img);
         cardBody.appendChild(pTime);
         cardBody.appendChild(p);
         cardBody.appendChild(t);
         cardBody.appendChild(a);
 
-        card.appendChild(img);
+        
         card.appendChild(cardBody);
 
         timeCardList.push(card);

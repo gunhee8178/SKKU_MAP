@@ -87,7 +87,7 @@
     display: block;
 }
 
-#accordionFlushBuilding{
+#accordionFlushBuilding, #accordionFlushTime{
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -104,6 +104,7 @@
 
 .accordion-body{
     background: #596D52;
+    border:none;
 }
 
 .accordion-button::before{
@@ -117,6 +118,7 @@
     background-repeat: no-repeat;
     background-size: 1.25rem;
     transition: transform .2s ease-in-out;
+
 }
 
 .accordion-button:not(.collapsed)::before {
@@ -125,10 +127,12 @@
     height: 20px;
     background-image: url("./icon_right.svg");
     transform: rotate(90deg);
+
 }
 
 .accordion-button::after{
     visibility: hidden;
+
 }
 
 .alert{
@@ -140,21 +144,42 @@
     margin: 5%;
     align-items: center;
     color: #2E4623;
+    
 }
 
 .card .card-img-top{
     margin: 3%;
     max-width: 300px;
     max-height: 300px;
-    border-radius: calc(.25rem - 1px)
+    border-radius: calc(.25rem - 1px);
 }
 /* https://getbootstrap.com/docs/5.0/components/accordion/#sass */
 
-
-li .card{
-  display:none;
+/* css 추가 */
+.card .card-img-mid{
+  min-width:300px;
+  max-width:300px;
+  max-height: 300px;
+  border-radius: calc(.25rem - 1px);
 }
 
-li.activeTime .card{
-  display:block;
+.card .card-time{
+  margin-top:5%;
+}
+
+.card-body .card-title{
+  padding:0;
+  margin-bottom:5%;
+  font-weight: 700;
+  color:#2E4623;
+  font-family: 'Inter';
+  background-image: url("./icon_pin_.svg");
+  background-repeat: no-repeat;
+  background-size: 9%;
+}
+
+.accordion-header{
+  font-family: 'Inter';
+  font-weight: 700;
+  color: #DADBD9;
 }

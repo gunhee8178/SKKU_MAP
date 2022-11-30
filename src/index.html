@@ -13,6 +13,7 @@
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/space.css">
+    <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
@@ -35,15 +36,38 @@
         </div>
         <div class="cont_area" id="rightDiv" style="display:none">
             <div id="tab1" class="cont">
-                Tab content 1
+                <div class="wrapper">
+                    <div class="alert alert-success" role="alert">
+                        안녕하세요. SKKU MAP을 이용해주셔서 감사합니다
+                        <br/>
+                        소프트웨어학과/컴퓨터공학과 학생들을 위한 정보가 주를 이룹니다.
+                        <br>
+                        따라서 학교내의 모든 건물, 모든 층의 정보를 가지고 있지는 않습니다.
+                        <br/>
+                        업데이트를 원하시는 장소를 아래 게시판에 자유롭게 적어주시면, 검토 후 추가하겠습니다.
+                    </div>
+    
+                    <div id="inputArea">
+                        <div class="row">
+                            <div class="mb-3">
+                                <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-auto">
+                              <label for="inputId" class="visually-hidden">ID</label>
+                              <input type="text" class="form-control" id="inputId" placeholder="닉네임">
+                            </div>
+                            <div class="col-auto">
+                              <button type="submit" class="btn btn-success">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div id="tab2" class="cont">
                 <div class="wrapper">
-                    <div class="search">
-                        <form action="">
-                            <input type="text" id="search_input" placeholder="검색">
-                        </form>
-                    </div>
 
                     <div class="alert alert-success" role="alert">
                         소프트웨어학과/컴퓨터공학과 학생들을 위한 정보가 주를 이룹니다.
@@ -432,33 +456,45 @@
             const iconList = document.querySelectorAll('.tab_menu .menu li a i');
 
             let activeCont = '';
-            tabList[0].querySelector('.btn').addEventListener('click', function (e) {
-                e.preventDefault();
-                area.style.display = "none";
-                for (var j = 0; j < tabList.length; j++) {
-                    circleList[j].style.backgroundColor = "#2E4623";
-                    iconList[j].style.color = '#929292';
-                    tabList[j].style.color = "#929292";
-                }
-            });
-            for (var i = 1; i < tabList.length; i++) {
+            // tabList[0].querySelector('.btn').addEventListener('click', function (e) {
+            //     e.preventDefault();
+            //     area.style.display = "none";
+            //     for (var j = 0; j < tabList.length; j++) {
+            //         circleList[j].style.backgroundColor = "#2E4623";
+            //         iconList[j].style.color = '#929292';
+            //         tabList[j].style.color = "#929292";
+            //     }
+            // });
+            for (var i = 0; i < tabList.length; i++) {
                 tabList[i].querySelector('.btn').addEventListener('click', function (e) {
                     e.preventDefault();
-                    for (var j = 1; j < tabList.length; j++) {
-                        area.style.display = 'block';
-                        tabList[j].classList.remove('is_on');
-                        contents[j].style.display = 'none';
-                        circleList[j].style.backgroundColor = "#2E4623";
-                        iconList[j].style.color = "#929292";
-                        tabList[j].style.color = '#929292';
+                    if(this.parentNode.classList.contains('is_on')){
+                        area.style.display = 'none';
+                        for (var j = 0; j < tabList.length; j++) {
+                            tabList[j].classList.remove('is_on');
+                            contents[j].style.display = 'none';
+                            circleList[j].style.backgroundColor = "#2E4623";
+                            iconList[j].style.color = "#929292";
+                            tabList[j].style.color = '#929292';
+                        }
                     }
-                    this.parentNode.classList.add('is_on');
-                    activeCont = this.getAttribute('href');
-                    this.style.color = "#ffffff";
-                    document.querySelector(activeCont).style.display = 'block';
-                    this.style.backgroundColor = "#728975";
-                    this.parentNode.style.color = "#ffffff";
-                    this.childNodes[0].style.color = "#fff";
+                    else{
+                        area.style.display = 'block';
+                        for (var j = 0; j < tabList.length; j++) {
+                            tabList[j].classList.remove('is_on');
+                            contents[j].style.display = 'none';
+                            circleList[j].style.backgroundColor = "#2E4623";
+                            iconList[j].style.color = "#929292";
+                            tabList[j].style.color = '#929292';
+                        }
+                        this.parentNode.classList.add('is_on');
+                        activeCont = this.getAttribute('href');
+                        this.style.color = "#ffffff";
+                        document.querySelector(activeCont).style.display = 'block';
+                        this.style.backgroundColor = "#728975";
+                        this.parentNode.style.color = "#ffffff";
+                        this.childNodes[0].style.color = "#fff";
+                    }
                 });
             }
 

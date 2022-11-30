@@ -100,7 +100,9 @@ iframe {
 }
 
 /* accordion */
-
+/******
+  UNUSED
+********/
 .multi-accordion {
   /* border: 1px solid #ccc; */
   border-radius: 5px;
@@ -182,4 +184,10 @@ img {
 
 [open] {
   background-color: #596d52;
+}
+
+/* function part */
+
+.accordion-body-funct {
+  background: #596d52;
 }

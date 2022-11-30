@@ -1,4 +1,6 @@
-# KINGO MAP
+
+
+# KINGO MAP <img src="https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/skku.png?alt=media&token=4e444884-e436-4095-89a9-f7983d1ea424" width="50" height="50"></img> 
 
 ## 프로젝트 소개 
 

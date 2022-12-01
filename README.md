@@ -1,8 +1,6 @@
+# SKKUP MAP <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/skku_s.png" width="50" height="50"></img>
 
-
-# SKKUP MAP <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/skku_s.png" width="50" height="50"></img> 
-
-## 프로젝트 소개 
+## 프로젝트 소개
 
 **성균관대학교 소프트웨어학과, 컴퓨터공학과 학생들을 위한 Campus Map 입니다.**
 
@@ -26,6 +24,7 @@
 </div>
 
 ### 디렉토리 구조
+
 ```bash
 // src directory structure
 ├── index.html
@@ -33,25 +32,25 @@
 │   ├── style.css
 │   ├── board.css
 │   ├── space.css
-│   └── icon_right.svg
+│   ├── icon_right.svg
+│   └── icon_pin_.svg
 ├── script
-│   ├── function.js
-│   ├── building.js
-│   ├── time.js
-│   └── board.js
-└── assest
-    ├── photo01.jpeg
-    └── photo02.jpeg
+    ├── mainPage.js
+    ├── function.js
+    ├── building.js
+    ├── time.js
+    └── board.js
 
-````
+```
 
 ### 사용방법
 
 SKKU MAP은 Firebase를 Database로 사용하고 있습니다.
 
 src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합니다.
+
 ```javascript
-  firebaseConfig = {
+firebaseConfig = {
   apiKey: "Your Firebase apiKey",
   authDomain: "authDomain",
   databaseURL: "databaseURL",
@@ -59,18 +58,18 @@ src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합�
   storageBucket: "storageBucket",
   messagingSenderId: "messagingSenderId",
   appId: "appId",
-  measurementId: "measurementId"
+  measurementId: "measurementId",
 };
 ```
 
 <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/screenshot.PNG"></img>
-    
+
     건물별 / 기능별 / 시간별로 구분 되어있습니다.
     목적 / 장소 / 시간에 따라 필요한 장소를 찾아보세요.
     등록되어 있지 않은 장소는 메인페이지 게시판을 이용해 추가를 요청해 보세요.
-     
 
 ## License
+
 All of source codes under our project are using MIT License.
 
 우수 프로젝트 시상 프로그램에 지원합니다

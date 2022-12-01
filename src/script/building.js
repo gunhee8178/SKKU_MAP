@@ -38,11 +38,11 @@ function createCard(filteredData) {
     card.className = "card";
 
     let img = document.createElement("img");
-    img.className = "card-img-top";
+    img.className = "card-img-mid";
     img.src = element.img
       ? element.img
       : "https://firebasestorage.googleapis.com/v0/b/kingomap-9ec10.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=e1115e44-2d46-4b46-b085-054152906d9e";
-      // "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=973e7766-366f-4ffb-bf20-0827534a4227";
+    // "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=973e7766-366f-4ffb-bf20-0827534a4227";
     img.alt = "Card image cap";
 
     let cardBody = document.createElement("div");

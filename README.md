@@ -1,6 +1,6 @@
 
 
-# KINGO MAP <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/skku_s.png" width="50" height="50"></img> 
+# SKKUP MAP <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/skku_s.png" width="50" height="50"></img> 
 
 ## 프로젝트 소개 
 
@@ -13,7 +13,7 @@
 
     공강인데 마땅히 공부할 장소를 모르겠을 때
     조별과제 회의 장소가 마땅히 떠오르지 않을 때
-    쉬고 싶은데 휴게 장소 위치를 모를 때 사용해주세요.
+    쉬고 싶은데 휴게 장소 위치를 모를 때 SKKU MAP을 사용해주세요.
 
 ### 기술 스택
 
@@ -47,7 +47,7 @@
 
 ### 사용방법
 
-KINGO MAP은 Firebase를 Database로 사용하고 있습니다.
+SKKU MAP은 Firebase를 Database로 사용하고 있습니다.
 
 src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합니다.
 ```javascript

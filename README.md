@@ -1,10 +1,15 @@
 
 
-# KINGO MAP <img src="https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/skku.png?alt=media&token=4e444884-e436-4095-89a9-f7983d1ea424" width="50" height="50"></img> 
+# KINGO MAP <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/skku_s.png" width="50" height="50"></img> 
 
 ## 프로젝트 소개 
 
 **성균관대학교 소프트웨어학과, 컴퓨터공학과 학생들을 위한 Campus Map 입니다.**
+
+<div >
+    <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/thumbnail1.png" style="margin-right: 10px" ></img> 
+    <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/thumbnail2.png"></img> 
+<div/>
 
     공간인데 마땅히 공부할 장소를 모르겠을 때
     조별과제 회의 장소가 마땅히 떠오르지 않을 때
@@ -57,7 +62,7 @@ src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합�
   measurementId: "measurementId"
 };
 ```
-<img src="https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/KingoMap.png?alt=media&token=46a2204d-f41e-4f94-bbc8-49ff3320315d"></img>
+<img src="https://github.com/gunhee8178/opss_team8/blob/main/img/screenshot.PNG"></img>
     
     건물별 / 기능별 / 시간별로 구분 되어있습니다.
     목적 / 장소 / 시간에 따라 필요한 장소를 찾아보세요.

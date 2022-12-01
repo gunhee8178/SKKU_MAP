@@ -2,7 +2,7 @@
 <Html>
 
 <head>
-    
+
     <title>SKKU MAP</title>
     <link href="../img/skku.ico" rel="shortcut icon" type="image/x-icon">
     <meta charset="utf-8" />
@@ -45,14 +45,14 @@
                 <div class="wrapper">
                     <div class="alert alert-success" role="alert">
                         안녕하세요. SKKU MAP을 이용해주셔서 감사합니다
-                        <br/>
+                        <br />
                         소프트웨어학과/컴퓨터공학과 학생들을 위한 정보가 주를 이룹니다.
                         <br>
                         따라서 학교내의 모든 건물, 모든 층의 정보를 가지고 있지는 않습니다.
-                        <br/>
+                        <br />
                         업데이트를 원하시는 장소를 아래 게시판에 자유롭게 적어주시면, 검토 후 추가하겠습니다.
                     </div>
-    
+
                     <div id="inputArea">
                         <div class="row">
                             <div class="mb-3">
@@ -61,15 +61,15 @@
                         </div>
                         <div class="row g-3">
                             <div class="col">
-                              <label for="inputId" class="visually-hidden">ID</label>
-                              <input type="text" class="form-control" id="inputId" placeholder="닉네임">
+                                <label for="inputId" class="visually-hidden">ID</label>
+                                <input type="text" class="form-control" id="inputId" placeholder="닉네임">
                             </div>
                             <div class="col">
                                 <label for="inputPassword" class="visually-hidden">ID</label>
                                 <input type="password" class="form-control" id="inputPassword" placeholder="비밀 번호">
-                              </div>
+                            </div>
                             <div class="col-auto">
-                              <button id="submitButton" type="submit" class="btn btn-success">저장</button>
+                                <button id="submitButton" type="submit" class="btn btn-success">저장</button>
                             </div>
                         </div>
                     </div>
@@ -370,7 +370,7 @@
                                 <button value="산학협력관" class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#flush-collapseInd" aria-expanded="false"
                                     aria-controls="flush-collapseThree">
-                                    산학 협력관
+                                    산학협력센터
                                 </button>
                             </h2>
                             <div id="flush-collapseInd" class="accordion-collapse collapse"
@@ -406,14 +406,13 @@
                         원하는 장소를 목적별로 구분했어요.<br>
                         강의실 대여가 하고 싶다면? <a
                             href="https://kingoinfo.skku.edu/gaia/nxui/index.html?ticket=SANkd6vub3FpahTi"
-                            target="_blank" style="text-decoration: none;">&nbsp;바로가기</a> <br>
+                            target="_blank" style="text-decoration: none;">&nbsp;바로가기</a> <br><br>
                         KINGO 계정 로그인 후 '신청/자격관리'<br> <i class="bi bi-arrow-right-short"></i>'공간대여신청'
                         <i class="bi bi-arrow-right-short"></i>
                         '예약신청' 을 통해 예약할 수 있어요.
                     </div>
-                    <br>
                     <!-- 내용 -->
-                    <div class="accordion accordion-flush" id="accordionFlushBuilding">
+                    <div class="accordion accordion-flush" id="accordionFlushFunction">
                         <div class="accordion-item function">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button value="휴식" class="accordion-button collapsed" type="button"
@@ -423,7 +422,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushBuilding">
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushFunction">
                                 <div class="accordion-body" value="휴식">
 
                                 </div>
@@ -439,7 +438,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushBuilding">
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushFunction">
                                 <div class="accordion-body" value="공부" id="acc-studybody">
                                     <!-- 필터링 버튼 -->
                                     <div class="filter">
@@ -465,7 +464,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseSemi" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingSemi" data-bs-parent="#accordionFlushBuilding">
+                                aria-labelledby="flush-headingSemi" data-bs-parent="#accordionFlushFunction">
                                 <div class="accordion-body" value="카페">
                                 </div>
                             </div>
@@ -480,7 +479,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseLib" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingLib" data-bs-parent="#accordionFlushBuilding">
+                                aria-labelledby="flush-headingLib" data-bs-parent="#accordionFlushFunction">
                                 <div class="accordion-body">
 
                                 </div>
@@ -573,7 +572,7 @@
                     data = snapshot.val()
 
                     floorList.forEach(element => {
-                        let building = element.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].value;                       
+                        let building = element.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].value;
                         let floor = element.childNodes[1].childNodes[1].value;
                         let cardList = createCard(filterDataByBuilding(data, building, floor));
                         cardList.forEach(card => {

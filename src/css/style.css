@@ -1,5 +1,6 @@
 html,
 body {
+  font-family: "Nanum Gothic", sans-serif;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -100,7 +101,9 @@ iframe {
 }
 
 /* accordion */
-
+/******
+  UNUSED
+********/
 .multi-accordion {
   /* border: 1px solid #ccc; */
   border-radius: 5px;

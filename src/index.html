@@ -6,15 +6,18 @@
     <title>SKKU MAP</title>
     <link href="../img/skku.ico" rel="shortcut icon" type="image/x-icon">
     <meta charset="utf-8" />
+
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
+
     <link rel="stylesheet" href="./css/space.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -27,6 +30,7 @@
             <li><a href="#tab2" class="btn"><i class="fa-solid fa-building fa-3x"></i></a>건물별 안내</li>
             <li><a href="#tab3" class="btn"><i class="fa-solid fa-list-ul fa-3x"></i></a>기능별 안내</li>
             <li><a href="#tab4" class="btn"><i class="fa-solid fa-clock fa-3x"></i></a>시간별 안내</li>
+
         </ul>
     </nav>
     <div id="wrap">
@@ -384,7 +388,7 @@
                                             <div id="flush-collapseInd1st" class="accordion-collapse collapse"
                                                 aria-labelledby="flush-headingInd1st"
                                                 data-bs-parent="#accordionFlushInd">
-                                                <div class="accordion-body"></div>
+                                                <div class="accordion-body2"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -394,29 +398,50 @@
                     </div>
                 </div>
             </div>
-
+            <!-- 기능별 안내 -->
             <div id="tab3" class="cont">
                 <div class="wrapper">
-                    <!-- 검색 -->
-                    <div class="search">
-                        <form action="">
-                            <input type="text" id="search_input" placeholder="검색">
-                        </form>
-
-                        <!-- <i class="fa-thin fa-check"></i> -->
+                    <!-- alert -->
+                    <div class="alert alert-success" role="alert">
+                        원하는 장소를 목적별로 구분했어요.<br>
+                        강의실 대여가 하고 싶다면? <a
+                            href="https://kingoinfo.skku.edu/gaia/nxui/index.html?ticket=SANkd6vub3FpahTi"
+                            target="_blank" style="text-decoration: none;">&nbsp;바로가기</a> <br>
+                        KINGO 계정 로그인 후 '신청/자격관리'<br> <i class="bi bi-arrow-right-short"></i>'공간대여신청'
+                        <i class="bi bi-arrow-right-short"></i>
+                        '예약신청' 을 통해 예약할 수 있어요.
                     </div>
                     <br>
                     <!-- 내용 -->
-                    <div class="contents">
-                        <div class="multi-accordion">
-                            <details>
-                                <summary>공강인데 쉴 곳 없을까?</summary>
-                                <div class="content">공강</div>
-                            </details>
-                            <details>
-                                <summary>공부하기 좋은 장소는?</summary>
-                                <div class="content">
-                                    <!-- 필터링 -->
+                    <div class="accordion accordion-flush" id="accordionFlushBuilding">
+                        <div class="accordion-item function">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button value="휴식" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    공강인데 쉴 곳 없을까?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body" value="휴식">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item function">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button value="공부" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    공부하기 좋은 장소는?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body" value="공부" id="acc-studybody">
+                                    <!-- 필터링 버튼 -->
                                     <div class="filter">
                                         <div><button class="off-btn" id="silence-btn">조용한</button></div>
                                         <div><button class="off-btn" id="natural-noise-btn">생활소음</button></div>
@@ -424,27 +449,49 @@
                                         <div><button class="off-btn" id="comfort-btn">편안한</button></div>
                                         <div><button class="off-btn" id="individual_btn">개인 공간</button></div>
                                     </div>
-                                    <!-- 정보 -->
-                                    <div class="info">
-                                        반도체관 1층
-                                        <div class="img_slot">
-                                            <img src="./assets/photo02.jpeg" alt="반도체관 1층 복도 중간">
-                                        </div>
-                                        <div class="img_description">상세 정보</div>
+                                    <div class="accordion-body-study" value="공부">
+
                                     </div>
                                 </div>
-                            </details>
-                            <details>
-                                <summary>카페는 어디에 있지?</summary>
-                                <div class="content">카페</div>
-                            </details>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item function">
+                            <h2 class="accordion-header" id="flush-headingSemi">
+                                <button value="카페" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseSemi" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    카페는 어디에 있지?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSemi" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingSemi" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body" value="카페">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item function">
+                            <h2 class="accordion-header" id="flush-headingLib">
+                                <button value="공간대여" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseLib" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    장소를 대여하고 싶은데...
+                                </button>
+                            </h2>
+                            <div id="flush-collapseLib" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingLib" data-bs-parent="#accordionFlushBuilding">
+                                <div class="accordion-body">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- 시간별 안내 -->
             <div id="tab4" class="cont">
+
                 <div class="wrapper">
                     <div class="alert alert-success" role="alert">
                         홈페이지에 명시된 이용 시간에 따라 분류하였습니다.
@@ -505,7 +552,7 @@
         <script type="text/javascript" src="./script/mainPage.js"></script>
         <script type="text/javascript" src="./script/building.js"></script>
         <script type="text/javascript" src="./script/time.js"></script>
-        
+        <script type="text/javascript" src="./script/function.js"></script>
 
         <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
@@ -525,24 +572,46 @@
                 if (snapshot.exists()) {
                     data = snapshot.val()
 
-
                     floorList.forEach(element => {
                         let building = element.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].value;                       
                         let floor = element.childNodes[1].childNodes[1].value;
                         let cardList = createCard(filterDataByBuilding(data, building, floor));
                         cardList.forEach(card => {
                             element.childNodes[3].childNodes[1].appendChild(card);
-                        });
 
+                        });
                     });
 
+                    // 기능별 안내
+                    functionList.forEach(element => {
+                        let funct = element.childNodes[1].childNodes[1].value;
+
+                        if (funct === '공부') {
+                            let cardList = createFunctCard(filterDataByFunction(data, funct));
+
+                            cardList.forEach(card => {
+                                element.childNodes[3].childNodes[1].childNodes[5].appendChild(card);
+                            })
+                        } else {
+                            let cardList = createFunctCard(filterDataByFunction(data, funct));
+
+                            cardList.forEach(card => {
+                                element.childNodes[3].childNodes[1].appendChild(card);
+                            })
+                        }
+                    })
+
+
+                    // 시간별 안내
                     timeList.forEach(element => {
                         let time = element.childNodes[1].childNodes[1].value;
                         let timeList = createTimeCard(filterDataByTime(data, time), time);
                         timeList.forEach(card => {
                             element.childNodes[3].childNodes[1].appendChild(card);
                         });
+
                     });
+
 
                 } else {
                     console.log("No data available");
@@ -562,7 +631,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
             crossorigin="anonymous"></script>
-        <script src="./script/function.js"></script>
 </body>
 
 </Html>

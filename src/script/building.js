@@ -38,12 +38,10 @@ function createCard(filteredData) {
     card.className = "card";
 
     let img = document.createElement("img");
-    img.className = "card-img-top";
-    img.src = element.img
-      ? element.img
-      : "https://firebasestorage.googleapis.com/v0/b/kingomap-9ec10.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=e1115e44-2d46-4b46-b085-054152906d9e";
-      // "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=973e7766-366f-4ffb-bf20-0827534a4227";
-    img.alt = "Card image cap";
+        img.className = "card-img-mid";
+        img.src = element.img ? element.img : "https://firebasestorage.googleapis.com/v0/b/kingomap-9ec10.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=e1115e44-2d46-4b46-b085-054152906d9e";
+        // "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Froom-studyroom.gif?alt=media&token=0e1464fd-d112-4a07-bc7e-3bcdb36274f6";
+        img.alt = "Card image cap"
 
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
@@ -53,7 +51,7 @@ function createCard(filteredData) {
     h5.textContent = element.name;
 
     let p = document.createElement("p");
-    p.className = "card-text";
+    p.className = "card-time";
     p.innerHTML =
       (element.purpose ? element.purpose + "<br/>" : "") +
       (element.semester_time ? element.semester_time + "<br/>" : "") +
@@ -64,10 +62,10 @@ function createCard(filteredData) {
     a.href = element.url ? element.url : "#";
 
     cardBody.appendChild(h5);
+    cardBody.appendChild(img);
     cardBody.appendChild(p);
     cardBody.appendChild(a);
 
-    card.appendChild(img);
     card.appendChild(cardBody);
 
     cardList.push(card);

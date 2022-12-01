@@ -20,7 +20,7 @@ function createFunctCard(filteredData) {
     card.className = "card";
 
     let img = document.createElement("img");
-    img.className = "card-img-top";
+    img.className = "card-img-mid";
     img.src = element.img
       ? element.img
       : "https://firebasestorage.googleapis.com/v0/b/skku-map-b85b1.appspot.com/o/building%2Fno-image-icon-6.png?alt=media&token=973e7766-366f-4ffb-bf20-0827534a4227";
@@ -34,7 +34,7 @@ function createFunctCard(filteredData) {
     h5.textContent = element.name;
 
     let p = document.createElement("p");
-    p.className = "card-text";
+    p.className = "card-time";
     p.innerHTML =
       (element.purpose ? element.purpose + "<br/>" : "") +
       (element.semester_time ? element.semester_time + "<br/>" : "") +
@@ -45,10 +45,10 @@ function createFunctCard(filteredData) {
     a.href = element.url ? element.url : "#";
 
     cardBody.appendChild(h5);
+    cardBody.appendChild(img);
     cardBody.appendChild(p);
     cardBody.appendChild(a);
 
-    card.appendChild(img);
     card.appendChild(cardBody);
 
     cardList.push(card);
@@ -64,8 +64,6 @@ let filterDataByAtm = (data, filArray) => {
   let filteredData = [];
   for (const [key, value] of Object.entries(data)) {
     dbAtmosphere = value.atmosphere;
-    console.log("dbAtmostphere:", dbAtmosphere);
-    console.log("filArray:", filArray);
     if (
       filArray[0] == "" &&
       filArray[1] == "" &&
@@ -85,7 +83,6 @@ let filterDataByAtm = (data, filArray) => {
         filteredData.push(value);
       }
     }
-    console.log("filteredData", filteredData);
   }
   return filteredData;
 };

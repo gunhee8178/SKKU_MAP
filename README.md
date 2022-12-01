@@ -11,7 +11,7 @@
     <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/thumbnail2.png"></img> 
 <div/>
 
-    공간인데 마땅히 공부할 장소를 모르겠을 때
+    공강인데 마땅히 공부할 장소를 모르겠을 때
     조별과제 회의 장소가 마땅히 떠오르지 않을 때
     쉬고 싶은데 휴게 장소 위치를 모를 때 사용해주세요.
 
@@ -47,7 +47,7 @@
 
 ### 사용방법
 
-SKKU CAMPUS MAP은 Firebase를 Database로 사용하고 있습니다.
+KINGO MAP은 Firebase를 Database로 사용하고 있습니다.
 
 src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합니다.
 ```javascript
@@ -62,6 +62,7 @@ src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합�
   measurementId: "measurementId"
 };
 ```
+
 <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/screenshot.PNG"></img>
     
     건물별 / 기능별 / 시간별로 구분 되어있습니다.

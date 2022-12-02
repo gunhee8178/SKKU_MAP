@@ -47,7 +47,14 @@
 
 #### 발표영상: https://youtu.be/__LdtIaBSUU
 
-SKKU MAP은 Firebase를 Database로 사용하고 있습니다.
+<img src="https://github.com/gunhee8178/opss_team8/blob/main/img/screenshot.PNG"></img>
+
+    건물별 / 기능별 / 시간별로 구분 되어있습니다.
+    목적 / 장소 / 시간에 따라 필요한 장소를 찾아보세요.
+    등록되어 있지 않은 장소는 메인페이지 게시판을 이용해 추가를 요청해 보세요.
+
+
+SKKU MAP은 **Firebase**를 Database로 사용하고 있습니다.
 
 src 폴더에 key.json 파일을 생성하여 아래 내용을 입력해야합니다.
 
@@ -63,12 +70,6 @@ firebaseConfig = {
   measurementId: "measurementId",
 };
 ```
-
-<img src="https://github.com/gunhee8178/opss_team8/blob/main/img/screenshot.PNG"></img>
-
-    건물별 / 기능별 / 시간별로 구분 되어있습니다.
-    목적 / 장소 / 시간에 따라 필요한 장소를 찾아보세요.
-    등록되어 있지 않은 장소는 메인페이지 게시판을 이용해 추가를 요청해 보세요.
 
 ## License
 

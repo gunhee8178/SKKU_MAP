@@ -12,7 +12,8 @@
     공강인데 마땅히 공부할 장소를 모르겠을 때
     조별과제 회의 장소가 마땅히 떠오르지 않을 때
     쉬고 싶은데 휴게 장소 위치를 모를 때 SKKU MAP을 사용해주세요.
-
+   
+   
 ### 기술 스택
 
 <div>
@@ -34,7 +35,7 @@
 │   ├── space.css
 │   ├── icon_right.svg
 │   └── icon_pin_.svg
-├── script
+└── script
     ├── mainPage.js
     ├── function.js
     ├── building.js
@@ -44,6 +45,8 @@
 ```
 
 ### 사용방법
+
+#### 발표영상: https://youtu.be/__LdtIaBSUU
 
 SKKU MAP은 Firebase를 Database로 사용하고 있습니다.
 

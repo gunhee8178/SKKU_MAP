@@ -36,6 +36,7 @@ function createFunctCard(filteredData) {
     let p = document.createElement("p");
     p.className = "card-time";
     p.innerHTML =
+      ("<b>"+ element.location + " " + (element.floor !== "-1" ? element.floor : "지하 1") + "층</b><br/>" ) +
       (element.purpose ? element.purpose + "<br/>" : "") +
       (element.semester_time ? element.semester_time + "<br/>" : "") +
       (element.equipment ? element.equipment + "<br/>" : "") +

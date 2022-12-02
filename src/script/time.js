@@ -51,28 +51,32 @@ function createTimeCard(filteredData, time) {
 
     let p = document.createElement("p");
     p.className = "card-text";
-    p.innerHTML = element.equipment ? element.equipment + "<br/>" : "";
+    p.innerHTML = 
+      element.equipment ? element.equipment + "<br/>" : "";
 
     let pTime = document.createElement("p");
     pTime.className = "card-time";
-    pTime.innerHTML = element.semester_time
+    // console.log(element.location + " " + (element.floor !== "-1" ? element.floor : "지하 1") + "층<br/>")
+    pTime.innerHTML = 
+      "<b>" + element.location + " " + (element.floor !== "-1" ? element.floor : "지하 1") + "층</b><br/>"  +
+      (element.semester_time
       ? element.semester_time + "<br/>" + (element.etc ? element.etc : "")
-      : element.etc;
+      : element.etc);
 
     let a = document.createElement("a");
     a.href = element.url ? element.url : "#";
 
-    let t = document.createElement("p");
-    if (time == "24시간") {
-      t.className = "card-location";
-      t.innerHTML = element.location ? element.location + "<br/>" : "";
-    }
+    // let t = document.createElement("p");
+    // if (time == "24시간") {
+    //   t.className = "card-location";
+    //   t.innerHTML = element.location ? element.location + "<br/>" : "";
+    // }
 
     cardBody.appendChild(h5);
     cardBody.appendChild(img);
     cardBody.appendChild(pTime);
     cardBody.appendChild(p);
-    cardBody.appendChild(t);
+    // cardBody.appendChild(t);
     cardBody.appendChild(a);
 
     card.appendChild(cardBody);

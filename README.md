@@ -64,6 +64,22 @@ firebaseConfig = {
 };
 ```
 
+#### DataBase 구조
+
+##### space ( 저장된 장소들의 정보를 가지고 있습니다 )
+
+|name  |location|floor|purpose|reservation |img        |semester_time|atmosphere|etc|url|
+|:----:|:------:|:---:|:-----:|:----------:|:--------:|:-----------:|:--------:|:--:|:-:|
+|장소명|소속 건물|층   |사용목적|예약 필요 여부|이미지 URL|학기중 운영시간|분위기|특징|URL|
+
+##### message ( 게시판에 게시되는 글의 정보를 가지고 있습니다 )
+
+|id  |password|message|
+|:----:|:------:|:---:|
+|ID|비밀 번호|메세지 내용|
+
+<br/>
+
 <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/screenshot.PNG"></img>
 
     건물별 / 기능별 / 시간별로 구분 되어있습니다.

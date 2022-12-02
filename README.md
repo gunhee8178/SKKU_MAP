@@ -5,8 +5,7 @@
 **성균관대학교 소프트웨어학과, 컴퓨터공학과 학생들을 위한 Campus Map 입니다.**
 
 <div >
-    <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/thumbnail1.png" style="margin-right: 10px" ></img> 
-    <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/thumbnail2.png"></img> 
+    <img src="https://github.com/gunhee8178/opss_team8/blob/main/img/thumbnail.png" style="margin-right: 10px" height="512px" ></img>
 <div/>
 
     공강인데 마땅히 공부할 장소를 모르겠을 때
